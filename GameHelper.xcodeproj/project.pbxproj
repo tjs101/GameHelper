@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		6650B1871E9791FB00E9A5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1861E9791FB00E9A5F3 /* main.m */; };
 		6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1891E9791FB00E9A5F3 /* AppDelegate.m */; };
-		6650B18D1E9791FB00E9A5F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B18C1E9791FB00E9A5F3 /* FirstViewController.m */; };
-		6650B1901E9791FB00E9A5F3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B18F1E9791FB00E9A5F3 /* SecondViewController.m */; };
-		6650B1931E9791FB00E9A5F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1911E9791FB00E9A5F3 /* Main.storyboard */; };
 		6650B1951E9791FB00E9A5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1941E9791FB00E9A5F3 /* Assets.xcassets */; };
 		6650B1981E9791FB00E9A5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1961E9791FB00E9A5F3 /* LaunchScreen.storyboard */; };
 		6C2B41FB85FE0CC75BCDA8CD /* libPods-GameHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F938592051BE2D5A038FE882 /* libPods-GameHelper.a */; };
@@ -23,11 +20,6 @@
 		6650B1861E9791FB00E9A5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6650B1881E9791FB00E9A5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6650B1891E9791FB00E9A5F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6650B18B1E9791FB00E9A5F3 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		6650B18C1E9791FB00E9A5F3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		6650B18E1E9791FB00E9A5F3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		6650B18F1E9791FB00E9A5F3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		6650B1921E9791FB00E9A5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6650B1941E9791FB00E9A5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6650B1971E9791FB00E9A5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6650B1991E9791FB00E9A5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,11 +79,10 @@
 			children = (
 				6650B1881E9791FB00E9A5F3 /* AppDelegate.h */,
 				6650B1891E9791FB00E9A5F3 /* AppDelegate.m */,
-				6650B18B1E9791FB00E9A5F3 /* FirstViewController.h */,
-				6650B18C1E9791FB00E9A5F3 /* FirstViewController.m */,
-				6650B18E1E9791FB00E9A5F3 /* SecondViewController.h */,
-				6650B18F1E9791FB00E9A5F3 /* SecondViewController.m */,
-				6650B1911E9791FB00E9A5F3 /* Main.storyboard */,
+				669534961E98BD6600AFAD53 /* Utility */,
+				669534951E98BD6000AFAD53 /* Model */,
+				669534941E98BD5A00AFAD53 /* View */,
+				669534931E98BD5100AFAD53 /* ViewController */,
 				6650B1941E9791FB00E9A5F3 /* Assets.xcassets */,
 				6650B1961E9791FB00E9A5F3 /* LaunchScreen.storyboard */,
 				6650B1991E9791FB00E9A5F3 /* Info.plist */,
@@ -106,6 +97,34 @@
 				6650B1861E9791FB00E9A5F3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		669534931E98BD5100AFAD53 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		669534941E98BD5A00AFAD53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		669534951E98BD6000AFAD53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		669534961E98BD6600AFAD53 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +191,6 @@
 			files = (
 				6650B1981E9791FB00E9A5F3 /* LaunchScreen.storyboard in Resources */,
 				6650B1951E9791FB00E9A5F3 /* Assets.xcassets in Resources */,
-				6650B1931E9791FB00E9A5F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,9 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6650B1901E9791FB00E9A5F3 /* SecondViewController.m in Sources */,
 				6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */,
-				6650B18D1E9791FB00E9A5F3 /* FirstViewController.m in Sources */,
 				6650B1871E9791FB00E9A5F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,14 +257,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6650B1911E9791FB00E9A5F3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6650B1921E9791FB00E9A5F3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6650B1961E9791FB00E9A5F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4J67FTSTQJ;
 				INFOPLIST_FILE = GameHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quentin.GameHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,6 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4J67FTSTQJ;
 				INFOPLIST_FILE = GameHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quentin.GameHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,6 +405,7 @@
 				6650B19E1E9791FB00E9A5F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

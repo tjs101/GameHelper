@@ -6,4 +6,5 @@ target ‘GameHelper’ do
   pod ‘MBProgressHUD’
   pod ‘TalkingData-AppAnalytics’
   pod ‘FCUUID’
+  pod ‘BmobSDK’
 end
