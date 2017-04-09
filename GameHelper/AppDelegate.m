@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <Reachability/QBGlobal.h>
+#import <BmobSDK/Bmob.h>
+#import <TalkingData.h>
+
+#define kBmobAppKey     @""
+#define kTalkingDataKey @""
 
 @interface AppDelegate ()
 
@@ -17,9 +23,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WifiAvailableNotification:) name:WifiAvailableNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WifiAvailableNotification:) name:WwanAavailableNotification object:nil];
+    [[QBGlobal sharedInstance] startNetworkNotifer];
+    
+    [Bmob registerWithAppKey:kBmobAppKey];
+    
+#if DEBUG
+    [TalkingData sessionStarted:kTalkingDataKey withChannelId:@"DEBUG"];
+#else
+    [TalkingData sessionStarted:kTalkingDataKey withChannelId:nil];
+#endif
+    
     return YES;
 }
 
+- (void)WifiAvailableNotification:(NSNotification *)notification
+{
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -35,6 +58,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    [Bmob activateSDK];
 }
 
 

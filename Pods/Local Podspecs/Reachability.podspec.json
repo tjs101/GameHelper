@@ -1,6 +1,6 @@
 {
   "name": "Reachability",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": {
     "Quentin": "tjs101@live.cn"
   },
@@ -9,7 +9,7 @@
   "license": "MIT",
   "source": {
     "git": "https://github.com/tjs101/Reachability.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "source_files": "Reachability/*.{h,m}",
   "platforms": {
