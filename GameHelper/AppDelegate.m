@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import <Reachability/QBGlobal.h>
-#import <BmobSDK/Bmob.h>
-#import <TalkingData.h>
+#import <QBFramework_IOS/QBFrameworkLib.h>
+#import "GHHomeViewController.h"
+#import "GHVideoHomeViewController.h"
+#import "GHTaskHomeViewController.h"
+#import "GHExploreHomeViewController.h"
 
-#define kBmobAppKey     @""
 #define kTalkingDataKey @""
 
 @interface AppDelegate ()
@@ -27,14 +28,38 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WifiAvailableNotification:) name:WifiAvailableNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WifiAvailableNotification:) name:WwanAavailableNotification object:nil];
     [[QBGlobal sharedInstance] startNetworkNotifer];
+
+
+    [QBManagerConfig sharedConfig].analyticsAppKey = kTalkingDataKey;
+    [QBSystem startAnalytics];
     
-    [Bmob registerWithAppKey:kBmobAppKey];
+    // 首页
+    GHHomeViewController *viewCtrl1 = [[GHHomeViewController alloc] init];
+    viewCtrl1.title = @"首页";
+    UINavigationController *navCtrl1 = [[UINavigationController alloc] initWithRootViewController:viewCtrl1];
     
-#if DEBUG
-    [TalkingData sessionStarted:kTalkingDataKey withChannelId:@"DEBUG"];
-#else
-    [TalkingData sessionStarted:kTalkingDataKey withChannelId:nil];
-#endif
+    // Video
+    GHVideoHomeViewController *viewCtrl2 = [[GHVideoHomeViewController alloc] init];
+    viewCtrl2.title = @"视频";
+    UINavigationController *navCtrl2 = [[UINavigationController alloc] initWithRootViewController:viewCtrl2];
+    
+    // 攻略
+    GHTaskHomeViewController *viewCtrl3 = [[GHTaskHomeViewController alloc] init];
+    viewCtrl3.title = @"攻略";
+    UINavigationController *navCtrl3 = [[UINavigationController alloc] initWithRootViewController:viewCtrl3];
+    
+    // 探索
+    GHExploreHomeViewController *viewCtrl4 = [[GHExploreHomeViewController alloc] init];
+    viewCtrl4.title = @"探索";
+    UINavigationController *navCtrl4 = [[UINavigationController alloc] initWithRootViewController:viewCtrl4];
+    
+    UITabBarController *tabCtrl = [[UITabBarController alloc] init];
+    tabCtrl.viewControllers = @[navCtrl1, navCtrl2, navCtrl3, navCtrl4];
+    
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = tabCtrl;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -58,8 +83,6 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    
-    [Bmob activateSDK];
 }
 
 

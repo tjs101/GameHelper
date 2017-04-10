@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54ABD2C0B3F5F891A09468CF /* Pods_GameHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A12018A5EFBF5F34BA697 /* Pods_GameHelper.framework */; };
+		2CDB58665FDB6C2CE8B50147 /* libPods-GameHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADDD305D01E46FEA41A9C15 /* libPods-GameHelper.a */; };
 		6650B1871E9791FB00E9A5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1861E9791FB00E9A5F3 /* main.m */; };
 		6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1891E9791FB00E9A5F3 /* AppDelegate.m */; };
 		6650B1951E9791FB00E9A5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1941E9791FB00E9A5F3 /* Assets.xcassets */; };
 		6650B1981E9791FB00E9A5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1961E9791FB00E9A5F3 /* LaunchScreen.storyboard */; };
+		6692F3831E9B62C600675007 /* GHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6692F3821E9B62C600675007 /* GHHomeViewController.m */; };
+		6692F3861E9B63E400675007 /* GHVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6692F3851E9B63E400675007 /* GHVideoHomeViewController.m */; };
+		6692F3891E9B642500675007 /* GHExploreHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6692F3881E9B642500675007 /* GHExploreHomeViewController.m */; };
+		6692F38C1E9B645000675007 /* GHTaskHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6692F38B1E9B645000675007 /* GHTaskHomeViewController.m */; };
+		6692F3901E9B646F00675007 /* QBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6692F38F1E9B646F00675007 /* QBSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16B6D6B738D0A91411BA1261 /* Pods-GameHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameHelper/Pods-GameHelper.release.xcconfig"; sourceTree = "<group>"; };
+		2ADDD305D01E46FEA41A9C15 /* libPods-GameHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6650B1821E9791FB00E9A5F3 /* GameHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6650B1861E9791FB00E9A5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6650B1881E9791FB00E9A5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -23,8 +29,17 @@
 		6650B1941E9791FB00E9A5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6650B1971E9791FB00E9A5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6650B1991E9791FB00E9A5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6692F3811E9B62C600675007 /* GHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHomeViewController.h; sourceTree = "<group>"; };
+		6692F3821E9B62C600675007 /* GHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHHomeViewController.m; sourceTree = "<group>"; };
+		6692F3841E9B63E400675007 /* GHVideoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHVideoHomeViewController.h; sourceTree = "<group>"; };
+		6692F3851E9B63E400675007 /* GHVideoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHVideoHomeViewController.m; sourceTree = "<group>"; };
+		6692F3871E9B642500675007 /* GHExploreHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHExploreHomeViewController.h; sourceTree = "<group>"; };
+		6692F3881E9B642500675007 /* GHExploreHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHExploreHomeViewController.m; sourceTree = "<group>"; };
+		6692F38A1E9B645000675007 /* GHTaskHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTaskHomeViewController.h; sourceTree = "<group>"; };
+		6692F38B1E9B645000675007 /* GHTaskHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTaskHomeViewController.m; sourceTree = "<group>"; };
+		6692F38E1E9B646F00675007 /* QBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSettingsViewController.h; sourceTree = "<group>"; };
+		6692F38F1E9B646F00675007 /* QBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBSettingsViewController.m; sourceTree = "<group>"; };
 		7FA2C42F71E785BACBAE5313 /* Pods-GameHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameHelper/Pods-GameHelper.debug.xcconfig"; sourceTree = "<group>"; };
-		EA9A12018A5EFBF5F34BA697 /* Pods_GameHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54ABD2C0B3F5F891A09468CF /* Pods_GameHelper.framework in Frameworks */,
+				2CDB58665FDB6C2CE8B50147 /* libPods-GameHelper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +66,7 @@
 		53AE51638701086665E2850F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA9A12018A5EFBF5F34BA697 /* Pods_GameHelper.framework */,
+				2ADDD305D01E46FEA41A9C15 /* libPods-GameHelper.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,9 +114,59 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6692F37D1E9B627800675007 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				6692F3871E9B642500675007 /* GHExploreHomeViewController.h */,
+				6692F3881E9B642500675007 /* GHExploreHomeViewController.m */,
+			);
+			name = Explore;
+			sourceTree = "<group>";
+		};
+		6692F37E1E9B628700675007 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				6692F38A1E9B645000675007 /* GHTaskHomeViewController.h */,
+				6692F38B1E9B645000675007 /* GHTaskHomeViewController.m */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		6692F37F1E9B628C00675007 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6692F3841E9B63E400675007 /* GHVideoHomeViewController.h */,
+				6692F3851E9B63E400675007 /* GHVideoHomeViewController.m */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		6692F3801E9B629000675007 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6692F3811E9B62C600675007 /* GHHomeViewController.h */,
+				6692F3821E9B62C600675007 /* GHHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		6692F38D1E9B645C00675007 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6692F38E1E9B646F00675007 /* QBSettingsViewController.h */,
+				6692F38F1E9B646F00675007 /* QBSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		669534931E98BD5100AFAD53 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6692F3801E9B629000675007 /* Home */,
+				6692F37F1E9B628C00675007 /* Video */,
+				6692F37E1E9B628700675007 /* Task */,
+				6692F37D1E9B627800675007 /* Explore */,
+				6692F38D1E9B645C00675007 /* Settings */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -249,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6692F3861E9B63E400675007 /* GHVideoHomeViewController.m in Sources */,
+				6692F38C1E9B645000675007 /* GHTaskHomeViewController.m in Sources */,
+				6692F3891E9B642500675007 /* GHExploreHomeViewController.m in Sources */,
+				6692F3901E9B646F00675007 /* QBSettingsViewController.m in Sources */,
 				6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */,
 				6650B1871E9791FB00E9A5F3 /* main.m in Sources */,
+				6692F3831E9B62C600675007 /* GHHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

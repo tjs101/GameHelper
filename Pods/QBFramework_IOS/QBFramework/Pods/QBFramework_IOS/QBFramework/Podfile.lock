@@ -1,0 +1,56 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AVOSCloud (4.2.0)
+  - FCUUID (1.2.0):
+    - UICKeyChainStore (~> 2.1.0)
+  - MBProgressHUD (0.9.2)
+  - QBFramework_IOS (1.0.5):
+    - AFNetworking
+    - AVOSCloud
+    - FCUUID
+    - MBProgressHUD
+    - Realm
+    - SVPullToRefresh
+    - TalkingData-AppAnalytics
+  - Realm (2.5.1):
+    - Realm/Headers (= 2.5.1)
+  - Realm/Headers (2.5.1)
+  - SVPullToRefresh (0.4.1)
+  - TalkingData-AppAnalytics (2.3.107)
+  - UICKeyChainStore (2.1.0)
+
+DEPENDENCIES:
+  - QBFramework_IOS (from `..`)
+
+EXTERNAL SOURCES:
+  QBFramework_IOS:
+    :path: ..
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AVOSCloud: 5446ad0320f4942cce1a036d131992cd1115db99
+  FCUUID: 9bfe031d35b7c221a7c66156a0af45d4eb49c3b6
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  QBFramework_IOS: d221835acc58623679ad60ad8d2634e9522190f4
+  Realm: 32f86104d37c8521f864d4274050b38ba6190733
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  TalkingData-AppAnalytics: 0c6c9c3fde45c2244da2b9b075a671825a9cabc4
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
+
+PODFILE CHECKSUM: 0707d3ef5ec0119224a4f89a68e5658621ee8f38
+
+COCOAPODS: 1.2.1.beta.1

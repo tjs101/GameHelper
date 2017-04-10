@@ -1,0 +1,51 @@
+{
+  "name": "QBFramework_IOS",
+  "version": "1.0.5",
+  "summary": "简单的框架.",
+  "description": "description",
+  "homepage": "https://github.com/tjs101/QBFramework_IOS",
+  "license": "MIT",
+  "authors": {
+    "tjs101": "tjs101@live.cn"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/tjs101/QBFramework_IOS.git",
+    "tag": "1.0.5"
+  },
+  "source_files": [
+    "QBFramework_IOS",
+    "QBFramework_IOS/**/*.{h,m}"
+  ],
+  "frameworks": [
+    "AdSupport",
+    "CoreLocation",
+    "AVFoundation"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "MBProgressHUD": [
+
+    ],
+    "SVPullToRefresh": [
+
+    ],
+    "AFNetworking": [
+
+    ],
+    "FCUUID": [
+
+    ],
+    "TalkingData-AppAnalytics": [
+
+    ],
+    "AVOSCloud": [
+
+    ],
+    "Realm": [
+
+    ]
+  }
+}
