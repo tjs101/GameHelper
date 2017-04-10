@@ -18,7 +18,7 @@ PODS:
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - MBProgressHUD (1.0.0)
-  - QBFramework_IOS (1.0.5):
+  - QBFramework_IOS (1.0.6):
     - AFNetworking
     - AVOSCloud
     - FCUUID
@@ -34,28 +34,23 @@ PODS:
   - UICKeyChainStore (2.1.1)
 
 DEPENDENCIES:
-  - QBFramework_IOS (from `https://github.com/tjs101/QBFramework_IOS.git`)
+  - QBFramework_IOS (from `..`)
 
 EXTERNAL SOURCES:
   QBFramework_IOS:
-    :git: https://github.com/tjs101/QBFramework_IOS.git
-
-CHECKOUT OPTIONS:
-  QBFramework_IOS:
-    :commit: 3b95099f07a7ab8e15c259efb92a0cf05275a63b
-    :git: https://github.com/tjs101/QBFramework_IOS.git
+    :path: ..
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AVOSCloud: 5446ad0320f4942cce1a036d131992cd1115db99
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  QBFramework_IOS: 2ca4804641d05ca31ae9fa518a43ca2977dce52b
+  QBFramework_IOS: 67236dd141b1f962ea785f30b63d5ace7d8936e6
   Realm: 32f86104d37c8521f864d4274050b38ba6190733
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   TalkingData-AppAnalytics: 0c6c9c3fde45c2244da2b9b075a671825a9cabc4
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
 
-PODFILE CHECKSUM: d26c56a3dee0420f63197c97ffd1905663921907
+PODFILE CHECKSUM: 0707d3ef5ec0119224a4f89a68e5658621ee8f38
 
 COCOAPODS: 1.2.1.beta.1

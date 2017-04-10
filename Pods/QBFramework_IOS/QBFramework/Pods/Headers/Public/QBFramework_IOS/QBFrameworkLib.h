@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/QBFrameworkLib.h
+../../../../../QBFramework_IOS/QBFrameworkLib.h

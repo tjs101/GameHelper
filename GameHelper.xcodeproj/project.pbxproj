@@ -94,7 +94,6 @@
 			children = (
 				6650B1881E9791FB00E9A5F3 /* AppDelegate.h */,
 				6650B1891E9791FB00E9A5F3 /* AppDelegate.m */,
-				669534961E98BD6600AFAD53 /* Utility */,
 				669534951E98BD6000AFAD53 /* Model */,
 				669534941E98BD5A00AFAD53 /* View */,
 				669534931E98BD5100AFAD53 /* ViewController */,
@@ -183,13 +182,6 @@
 			children = (
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		669534961E98BD6600AFAD53 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/Swizzling/NSObject+Swizzling.h
+../../../../../QBFramework_IOS/Swizzling/NSObject+Swizzling.h

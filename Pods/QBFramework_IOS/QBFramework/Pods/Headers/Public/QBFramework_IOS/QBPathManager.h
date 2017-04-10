@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/Utility/QBPathManager.h
+../../../../../QBFramework_IOS/Utility/QBPathManager.h

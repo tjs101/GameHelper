@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/Category/UIImage+Utility.h
+../../../../../QBFramework_IOS/Category/UIImage+Utility.h

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QBFramework_IOS"
-  s.version      = "1.0.6"
+  s.version      = "1.1.5"
   s.summary      = "简单的框架."
 
   # This description is used to generate tags and improve search results.
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "AdSupport", "CoreLocation", "AVFoundation"
+  # s.frameworks = "AdSupport", "CoreLocation", "AVFoundation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -133,10 +133,9 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "MBProgressHUD"
   s.dependency "SVPullToRefresh"
-  s.dependency "AFNetworking"
   s.dependency "FCUUID"
   s.dependency "TalkingData-AppAnalytics"
-  s.dependency "AVOSCloud"
+  s.dependency "BmobSDK"
   s.dependency "Realm"
 
 end

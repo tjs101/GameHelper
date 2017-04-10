@@ -23,5 +23,7 @@
 #import "QBViewController.h"
 #import "QBWebViewController.h"
 
+#import "UIButton+Color.h"
+
 
 #endif /* QBFrameworkLib_h */

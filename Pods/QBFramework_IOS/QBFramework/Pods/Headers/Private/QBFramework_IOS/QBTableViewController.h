@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/ViewController/QBTableViewController.h
+../../../../../QBFramework_IOS/ViewController/QBTableViewController.h

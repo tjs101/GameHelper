@@ -7,6 +7,7 @@
 //
 
 #import "GHHomeViewController.h"
+#import <BmobSDK/Bmob.h>
 
 @interface GHHomeViewController ()
 
@@ -15,9 +16,51 @@
 @implementation GHHomeViewController
 
 - (void)viewDidLoad {
+    
+    self.hasPullRefresh = YES;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    [self pullToRefresh];
+}
+
+#pragma mark - pull
+
+- (void)triggerPullToRefresh
+{
+    [self requestVideoLatestData];
+    [self requestVideoRandomData];
+    [self requestVideoRecommodData];
+}
+
+#pragma mark - request video recommod
+
+- (void)requestVideoRecommodData
+{
+    BmobQuery *query = [BmobQuery queryWithClassName:@"VideoRecommod"];
+    query.limit = 6;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        NSLog(@"array %@", array);
+    }];
+}
+
+- (void)requestVideoRandomData
+{
+    BmobQuery *query = [BmobQuery queryWithClassName:@"VideoRandom"];
+    query.limit = 6;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        NSLog(@"array %@", array);
+    }];
+}
+
+- (void)requestVideoLatestData
+{
+    BmobQuery *query = [BmobQuery queryWithClassName:@"VideoLatest"];
+    query.limit = 6;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        NSLog(@"array %@", array);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

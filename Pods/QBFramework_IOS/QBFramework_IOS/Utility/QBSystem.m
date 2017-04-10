@@ -136,7 +136,11 @@
     [TalkingData setSignalReportEnabled:YES];
     [TalkingData setExceptionReportEnabled:YES];
     
+#if DEBUG
+    [TalkingData sessionStarted:[QBManagerConfig sharedConfig].analyticsAppKey withChannelId:@"DEBUG"];
+#else
     [TalkingData sessionStarted:[QBManagerConfig sharedConfig].analyticsAppKey withChannelId:nil];
+#endif
 }
 
 + (void)beginLogPageView:(NSString *)viewName
@@ -183,8 +187,8 @@
     
     MBProgressHUD *progressHud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     progressHud.mode = MBProgressHUDModeText;
-    progressHud.detailsLabelText = progress;
-    [progressHud hide:YES afterDelay:delay];
+    progressHud.detailsLabel.text = progress;
+    [progressHud hideAnimated:YES afterDelay:delay];
 }
 
 #pragma mark - alert view

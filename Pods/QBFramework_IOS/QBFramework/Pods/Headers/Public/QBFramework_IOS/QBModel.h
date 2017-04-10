@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/Model/QBModel.h
+../../../../../QBFramework_IOS/Model/QBModel.h

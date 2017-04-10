@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/Utility/QBGlobal.h
+../../../../../QBFramework_IOS/Utility/QBGlobal.h

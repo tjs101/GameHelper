@@ -12,8 +12,13 @@
 #import "GHVideoHomeViewController.h"
 #import "GHTaskHomeViewController.h"
 #import "GHExploreHomeViewController.h"
+#import <BmobSDK/Bmob.h>
 
+// talkingdata
 #define kTalkingDataKey @""
+
+// bmob
+#define kBmobAppKey     @"beab7e7170a7928ef335cda6f966f9f5"
 
 @interface AppDelegate ()
 
@@ -32,6 +37,9 @@
 
     [QBManagerConfig sharedConfig].analyticsAppKey = kTalkingDataKey;
     [QBSystem startAnalytics];
+    
+    // bmob
+    [Bmob registerWithAppKey:kBmobAppKey];
     
     // 首页
     GHHomeViewController *viewCtrl1 = [[GHHomeViewController alloc] init];
@@ -83,6 +91,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    [Bmob activateSDK];
 }
 
 

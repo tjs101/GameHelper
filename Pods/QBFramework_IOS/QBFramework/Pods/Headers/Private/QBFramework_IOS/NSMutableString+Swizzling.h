@@ -1,1 +1,1 @@
-../../../QBFramework_IOS/QBFramework_IOS/Swizzling/NSMutableString+Swizzling.h
+../../../../../QBFramework_IOS/Swizzling/NSMutableString+Swizzling.h
