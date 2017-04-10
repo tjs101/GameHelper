@@ -42,6 +42,8 @@
     query.limit = 6;
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         NSLog(@"array %@", array);
+        
+        
     }];
 }
 
@@ -60,6 +62,8 @@
     query.limit = 6;
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         NSLog(@"array %@", array);
+        
+        [self reloadView];
     }];
 }
 

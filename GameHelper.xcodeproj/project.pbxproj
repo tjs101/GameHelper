@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2CDB58665FDB6C2CE8B50147 /* libPods-GameHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADDD305D01E46FEA41A9C15 /* libPods-GameHelper.a */; };
+		664888CA1E9BA8AE00DC316A /* GHVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664888C91E9BA8AE00DC316A /* GHVideoView.m */; };
+		664888D01E9BA8E700DC316A /* GHVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 664888CF1E9BA8E700DC316A /* GHVideoCell.m */; };
+		664888D31E9BAC0200DC316A /* GHVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 664888D21E9BAC0200DC316A /* GHVideoItem.m */; };
 		6650B1871E9791FB00E9A5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1861E9791FB00E9A5F3 /* main.m */; };
 		6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1891E9791FB00E9A5F3 /* AppDelegate.m */; };
 		6650B1951E9791FB00E9A5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1941E9791FB00E9A5F3 /* Assets.xcassets */; };
@@ -22,6 +25,12 @@
 /* Begin PBXFileReference section */
 		16B6D6B738D0A91411BA1261 /* Pods-GameHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameHelper/Pods-GameHelper.release.xcconfig"; sourceTree = "<group>"; };
 		2ADDD305D01E46FEA41A9C15 /* libPods-GameHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		664888C81E9BA8AE00DC316A /* GHVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHVideoView.h; sourceTree = "<group>"; };
+		664888C91E9BA8AE00DC316A /* GHVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHVideoView.m; sourceTree = "<group>"; };
+		664888CE1E9BA8E700DC316A /* GHVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHVideoCell.h; sourceTree = "<group>"; };
+		664888CF1E9BA8E700DC316A /* GHVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHVideoCell.m; sourceTree = "<group>"; };
+		664888D11E9BAC0200DC316A /* GHVideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHVideoItem.h; sourceTree = "<group>"; };
+		664888D21E9BAC0200DC316A /* GHVideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHVideoItem.m; sourceTree = "<group>"; };
 		6650B1821E9791FB00E9A5F3 /* GameHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6650B1861E9791FB00E9A5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6650B1881E9791FB00E9A5F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +182,10 @@
 		669534941E98BD5A00AFAD53 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				664888C81E9BA8AE00DC316A /* GHVideoView.h */,
+				664888C91E9BA8AE00DC316A /* GHVideoView.m */,
+				664888CE1E9BA8E700DC316A /* GHVideoCell.h */,
+				664888CF1E9BA8E700DC316A /* GHVideoCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -180,6 +193,8 @@
 		669534951E98BD6000AFAD53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				664888D11E9BAC0200DC316A /* GHVideoItem.h */,
+				664888D21E9BAC0200DC316A /* GHVideoItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -281,7 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ADD0C44B017171E4944E33A4 /* [CP] Copy Pods Resources */ = {
@@ -307,8 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6692F3861E9B63E400675007 /* GHVideoHomeViewController.m in Sources */,
+				664888CA1E9BA8AE00DC316A /* GHVideoView.m in Sources */,
 				6692F38C1E9B645000675007 /* GHTaskHomeViewController.m in Sources */,
+				664888D01E9BA8E700DC316A /* GHVideoCell.m in Sources */,
 				6692F3891E9B642500675007 /* GHExploreHomeViewController.m in Sources */,
+				664888D31E9BAC0200DC316A /* GHVideoItem.m in Sources */,
 				6692F3901E9B646F00675007 /* QBSettingsViewController.m in Sources */,
 				6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */,
 				6650B1871E9791FB00E9A5F3 /* main.m in Sources */,

@@ -15,7 +15,7 @@
 #import <BmobSDK/Bmob.h>
 
 // talkingdata
-#define kTalkingDataKey @""
+#define kTalkingDataKey @"2D761A5AFA42473F826ED767BF5074EA"
 
 // bmob
 #define kBmobAppKey     @"beab7e7170a7928ef335cda6f966f9f5"

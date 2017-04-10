@@ -13,12 +13,16 @@ PODS:
   - Realm (2.5.1):
     - Realm/Headers (= 2.5.1)
   - Realm/Headers (2.5.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SVPullToRefresh (0.4.1)
   - TalkingData-AppAnalytics (2.3.107)
   - UICKeyChainStore (2.1.1)
 
 DEPENDENCIES:
   - QBFramework_IOS (from `https://github.com/tjs101/QBFramework_IOS.git`)
+  - SDWebImage
 
 EXTERNAL SOURCES:
   QBFramework_IOS:
@@ -35,10 +39,11 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   QBFramework_IOS: 60182cea07834bd645f78a44382309bebedc6dbe
   Realm: 32f86104d37c8521f864d4274050b38ba6190733
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   TalkingData-AppAnalytics: 0c6c9c3fde45c2244da2b9b075a671825a9cabc4
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
 
-PODFILE CHECKSUM: 4ffee1e620d297f629946124557b53feb90d69bb
+PODFILE CHECKSUM: cf0e6ec5103d8456e5aaaf56a244d68df8e2b39a
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.2.0.beta.1
