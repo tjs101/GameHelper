@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54ABD2C0B3F5F891A09468CF /* Pods_GameHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A12018A5EFBF5F34BA697 /* Pods_GameHelper.framework */; };
 		6650B1871E9791FB00E9A5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1861E9791FB00E9A5F3 /* main.m */; };
 		6650B18A1E9791FB00E9A5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650B1891E9791FB00E9A5F3 /* AppDelegate.m */; };
 		6650B1951E9791FB00E9A5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1941E9791FB00E9A5F3 /* Assets.xcassets */; };
 		6650B1981E9791FB00E9A5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6650B1961E9791FB00E9A5F3 /* LaunchScreen.storyboard */; };
-		6C2B41FB85FE0CC75BCDA8CD /* libPods-GameHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F938592051BE2D5A038FE882 /* libPods-GameHelper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		6650B1971E9791FB00E9A5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6650B1991E9791FB00E9A5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA2C42F71E785BACBAE5313 /* Pods-GameHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameHelper/Pods-GameHelper.debug.xcconfig"; sourceTree = "<group>"; };
-		F938592051BE2D5A038FE882 /* libPods-GameHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9A12018A5EFBF5F34BA697 /* Pods_GameHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C2B41FB85FE0CC75BCDA8CD /* libPods-GameHelper.a in Frameworks */,
+				54ABD2C0B3F5F891A09468CF /* Pods_GameHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +51,7 @@
 		53AE51638701086665E2850F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F938592051BE2D5A038FE882 /* libPods-GameHelper.a */,
+				EA9A12018A5EFBF5F34BA697 /* Pods_GameHelper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ADD0C44B017171E4944E33A4 /* [CP] Copy Pods Resources */ = {

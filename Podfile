@@ -1,4 +1,5 @@
 platform :ios, ‘8.0’
+use_frameworks!
 
 target ‘GameHelper’ do
   pod 'Realm'
@@ -7,4 +8,5 @@ target ‘GameHelper’ do
   pod ‘TalkingData-AppAnalytics’
   pod ‘FCUUID’
   pod ‘BmobSDK’
+  pod ‘LeanCloud’
 end
