@@ -10,12 +10,22 @@
 
 @implementation GHVideoCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)customInit
+{
+    [super customInit];
+    
+    // left
+    _leftView = [[GHVideoView alloc] init];
+    [self.contentView addSubview:_leftView];
+    
+    // right
+    _rightView = [[GHVideoView alloc] init];
+    [self.contentView addSubview:_rightView];
 }
-*/
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+}
 
 @end

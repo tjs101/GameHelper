@@ -8,6 +8,7 @@
 
 #import "GHVideoView.h"
 #import <QBFramework_IOS/UILabel+Font.h>
+#import <QBFramework_IOS/QBConfig.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface GHVideoView ()
@@ -63,6 +64,7 @@
     _imageView.frame = CGRectMake(x, y, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
     // title
+    y = CGRectGetMaxY(_imageView.frame);
     _titleLabel.frame = CGRectMake(x, y, CGRectGetWidth(_imageView.frame), 0);
 }
 

@@ -9,7 +9,11 @@
 
 #import <UIKit/UIKit.h>
 #import <QBFramework_IOS/QBTableViewCell.h>
+#import "GHVideoView.h"
 
 @interface GHVideoCell : QBTableViewCell
+
+@property (nonatomic, strong) GHVideoView *leftView;/**<GHVideoView*/
+@property (nonatomic, strong) GHVideoView *rightView;/**<GHVideoView*/
 
 @end
