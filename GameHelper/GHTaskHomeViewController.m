@@ -11,16 +11,24 @@
 #import <BmobSDK/Bmob.h>
 #import <Realm/Realm.h>
 #import <QBFramework_IOS/UILabel+Font.h>
+#import <QBFrameworkLib.h>
 
 @interface GHTaskItem : RLMObject
 
 @property (nonatomic, copy) NSString *title;/**<标题*/
 @property (nonatomic, copy) NSString *date;/**<时间*/
 @property (nonatomic, assign) double taskId;/**<id*/
+
+@property (nonatomic, copy) NSString *url;/**<web地址*/
+
 @end
 
 @implementation GHTaskItem
 
+- (NSString *)url
+{
+    return @"http://www.baidu.com";
+}
 
 @end
 
@@ -171,6 +179,13 @@
     }];
 }
 
+#pragma mark - null data
+
+- (BOOL)nullData
+{
+    return [self.items count] == 0;
+}
+
 #pragma mark - UITableView
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -202,6 +217,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if ([self nullData]) {
+        return;
+    }
+    
+    GHTaskItem *item = [self.items objectAtIndex:indexPath.row];
+    
+    QBWebViewController *viewCtrl = [[QBWebViewController alloc] initWithURL:[NSURL URLWithString:item.url]];
+    viewCtrl.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

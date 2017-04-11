@@ -1,1 +1,0 @@
-../../../../../QBFramework_IOS/Utility/QBManagerConfig.h
