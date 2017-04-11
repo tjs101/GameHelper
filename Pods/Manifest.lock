@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   QBFramework_IOS:
-    :commit: 7f2aad0dc20ce0fa4fdec45b88aefcb7a4527131
+    :commit: 118977e94f71aca8649949347af6cfd5a4674635
     :git: https://github.com/tjs101/QBFramework_IOS.git
 
 SPEC CHECKSUMS:
@@ -46,4 +46,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cf0e6ec5103d8456e5aaaf56a244d68df8e2b39a
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.1.beta.1

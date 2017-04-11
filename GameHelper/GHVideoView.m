@@ -34,6 +34,10 @@
 {
     // imageview
     _imageView = [[UIImageView alloc] init];
+    _imageView.layer.cornerRadius = 4;
+    _imageView.layer.masksToBounds = YES;
+    _imageView.layer.borderColor = colorFromRGB(0xacacac).CGColor;
+    _imageView.layer.borderWidth = 1;
     [self addSubview:_imageView];
     
     // title
@@ -61,11 +65,18 @@
     CGFloat x = 0, y = 0;
     
     // imageview
-    _imageView.frame = CGRectMake(x, y, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    _imageView.frame = CGRectMake(x, y, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - CGRectGetHeight(_titleLabel.frame) - 10);
     
     // title
-    y = CGRectGetMaxY(_imageView.frame);
-    _titleLabel.frame = CGRectMake(x, y, CGRectGetWidth(_imageView.frame), 0);
+    y = CGRectGetMaxY(_imageView.frame) + 5;
+    _titleLabel.frame = CGRectMake(x, y, CGRectGetWidth(_imageView.frame), CGRectGetHeight(_titleLabel.frame));
+}
+
++ (CGSize)videoSize
+{
+    CGFloat width = (kScreenWidth - 40) / 2;
+    
+    return CGSizeMake(width, width * 2 / 3);
 }
 
 @end

@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) GHVideoItem *item;/**<GHVideoItem*/
 
++ (CGSize)videoSize;
+
 @end
