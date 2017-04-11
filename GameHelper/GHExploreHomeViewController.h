@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <QBFramework_IOS/QBFrameworkLib.h>
+#import <QBFramework_IOS/QBPageViewController.h>
 
-@interface GHExploreHomeViewController : QBTableViewController
+@interface GHExploreHomeViewController : QBPageViewController
 
 @end

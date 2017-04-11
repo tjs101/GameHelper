@@ -1,6 +1,6 @@
 {
   "name": "QBFramework_IOS",
-  "version": "1.2.0.3",
+  "version": "1.2.0.4",
   "summary": "简单的框架.",
   "description": "description",
   "homepage": "https://github.com/tjs101/QBFramework_IOS",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/tjs101/QBFramework_IOS.git",
-    "tag": "1.2.0.3"
+    "tag": "1.2.0.4"
   },
   "source_files": [
     "QBFramework_IOS",

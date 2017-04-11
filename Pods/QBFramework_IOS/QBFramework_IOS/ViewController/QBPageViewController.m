@@ -9,6 +9,8 @@
 #import "QBPageViewController.h"
 #import "QBConfig.h"
 
+#define kTitleFont  [UIFont systemFontOfSize:14]
+
 typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
 
 @interface QBPageNavigation : UIView
@@ -17,6 +19,8 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
     NSArray  *_titles;
     
     UIButton *_selectedBtn;
+    
+    NSMutableArray  *_titleSizes;
 }
 
 - (instancetype)initWithTitles:(NSArray <NSString *>*)titles;
@@ -31,7 +35,21 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
 
 - (instancetype)initWithTitles:(NSArray<NSString *> *)titles
 {
-    if (self = [super initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)]) {
+    _titleSizes = [NSMutableArray arrayWithCapacity:[titles count]];
+    
+    __block CGFloat totalWidth = 0;// 总宽度
+    
+    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        CGSize size = [obj sizeWithAttributes:@{NSFontAttributeName : kTitleFont}];
+        CGFloat width = size.width + 16;
+        
+        [_titleSizes addObject:@(width)];
+        
+        totalWidth += width;
+    }];
+    
+    if (self = [super initWithFrame:CGRectMake(0, 0, totalWidth, 44)]) {
         _titles = [NSArray arrayWithArray:titles];
         
         [self customInit];
@@ -42,20 +60,25 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
 - (void)customInit
 {
     NSInteger index = 0;
-    CGFloat width = kScreenWidth / [_titles count];
+    CGFloat offsetX = 0;
     
     for (NSString *title in _titles) {
+        
+        CGFloat width = [[_titleSizes objectAtIndex:index] floatValue];
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
         [btn setTitle:title forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        btn.titleLabel.font = kTitleFont;
+        btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [btn addTarget:self action:@selector(onTitleClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn sizeToFit];
-        btn.frame = CGRectMake(index * width, 0, width, CGRectGetHeight(self.frame));
+        btn.frame = CGRectMake(offsetX, 0, width, CGRectGetHeight(self.frame));
         [self addSubview:btn];
         
         index ++;
+        offsetX += width;
     }
 }
 
@@ -116,7 +139,7 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
     // Do any additional setup after loading the view.
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-
+    
     self.navigationItem.titleView = self.pageNavigation;
     
     self.delegate = self;
@@ -173,7 +196,7 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
         didFinishAnimating:(BOOL)finished
    previousViewControllers:(NSArray *)previousViewControllers
        transitionCompleted:(BOOL)completed {
-
+    
     UIViewController *viewCtrl = [self.viewControllers firstObject];
     NSUInteger index = [self.subViewControllers indexOfObject:viewCtrl];
     [_pageNavigation scrollToIndex:index];
@@ -193,7 +216,7 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
                 [viewCtrl performSelector:@selector(refreshView)];
             }
         }
-
+        
     }
     else {
         UIPageViewControllerNavigationDirection direction = _selectedIndex < clickAtIndex ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse;
@@ -202,7 +225,7 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
     }
     
     _selectedIndex = clickAtIndex;
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -211,13 +234,13 @@ typedef void(^QBPageNavigationDidClickAtIndex)(NSInteger clickAtIndex);
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

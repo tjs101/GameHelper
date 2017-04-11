@@ -63,8 +63,6 @@
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - tabbar - topOff) style:_style];
     tableView.backgroundColor = [UIColor clearColor];
     tableView.backgroundView = nil;
-    tableView.separatorColor = [UIColor clearColor];
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
