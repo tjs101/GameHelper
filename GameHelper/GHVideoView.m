@@ -41,7 +41,7 @@
     [self addSubview:_imageView];
     
     // title
-    _titleLabel = [UILabel initWithFont:[UIFont systemFontOfSize:14] textColor:[UIColor whiteColor]];
+    _titleLabel = [UILabel initWithFont:[UIFont systemFontOfSize:14] textColor:colorFromRGB(0x131313)];
     [self addSubview:_titleLabel];
 }
 

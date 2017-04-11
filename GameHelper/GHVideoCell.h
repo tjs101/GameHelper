@@ -16,4 +16,6 @@
 @property (nonatomic, strong) GHVideoView *leftView;/**<GHVideoView*/
 @property (nonatomic, strong) GHVideoView *rightView;/**<GHVideoView*/
 
++ (CGFloat)height;
+
 @end

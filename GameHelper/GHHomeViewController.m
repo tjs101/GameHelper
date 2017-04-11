@@ -53,7 +53,24 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         NSLog(@"array %@", array);
         
-        
+        if (error == nil) {
+            
+            [_recommodItems removeAllObjects];
+            
+            for (BmobObject *object in array) {
+                
+                GHVideoItem *item = [[GHVideoItem alloc] init];
+                item.videoid = [object objectForKey:@"videoid"];
+                item.videoName = [object objectForKey:@"videoName"];
+                item.videoLength = [object objectForKey:@"videoLength"];
+                item.videoOnYouKuUrl = [object objectForKey:@"videoOnYouKuUrl"];
+                item.videoScreenShot = [object objectForKey:@"videoScreenShot"];
+                item.videoUpdateDate = [object objectForKey:@"videoUpdateDate"];
+                [self.recommodItems addObject:item];
+                
+            }
+            
+        }
     }];
 }
 
@@ -63,6 +80,24 @@
     query.limit = 6;
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         NSLog(@"array %@", array);
+        if (error == nil) {
+            
+            [self.randomItems removeAllObjects];
+            
+            for (BmobObject *object in array) {
+                
+                GHVideoItem *item = [[GHVideoItem alloc] init];
+                item.videoid = [object objectForKey:@"videoid"];
+                item.videoName = [object objectForKey:@"videoName"];
+                item.videoLength = [object objectForKey:@"videoLength"];
+                item.videoOnYouKuUrl = [object objectForKey:@"videoOnYouKuUrl"];
+                item.videoScreenShot = [object objectForKey:@"videoScreenShot"];
+                item.videoUpdateDate = [object objectForKey:@"videoUpdateDate"];
+                [self.randomItems addObject:item];
+                
+            }
+            
+        }
     }];
 }
 
@@ -104,9 +139,7 @@
     if (cell == nil) {
         cell = [[GHVideoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
-    
-    
-    
+
     NSInteger index = indexPath.row;
     
     if (index < [self.latestItems count]) {
@@ -128,6 +161,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return ([self.latestItems count] + 1) / 2;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [GHVideoCell height];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
