@@ -43,6 +43,9 @@
 #pragma mark - 评论
 + (void)appReviewAppId:(NSString *)appId;
 
+#pragma mark - 检测最新版本
++ (void)checkAppId:(NSString *)appId completionHandler:(void (^) (NSString *updateAppId))handler;
+
 #pragma mark - Progress
 + (void)showProgressText:(NSString *)progress;
 + (void)showProgressText:(NSString *)progress afterDelay:(NSTimeInterval)delay;

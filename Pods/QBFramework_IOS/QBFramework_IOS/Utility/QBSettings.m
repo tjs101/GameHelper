@@ -39,4 +39,16 @@
     return nil;
 }
 
+#pragma mark - appUpdateVersion
+
+- (void)setAppUpdateVersion:(NSString *)appUpdateVersion
+{
+    [self saveValue:appUpdateVersion];
+}
+
+- (NSString *)appUpdateVersion
+{
+    return [self valueForQBKey:@"appUpdateVersion"];
+}
+
 @end

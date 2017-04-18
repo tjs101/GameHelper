@@ -15,6 +15,7 @@
 #import <FCUUID/FCUUID.h>
 #import "TalkingData.h"
 #import "QBManagerConfig.h"
+#import "QBSettings.h"
 
 @implementation QBSystem
 
@@ -170,6 +171,42 @@
     NSAssert(appId == nil, @"评论id不能为空");
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", appId]]];
+}
+
++ (void)checkAppId:(NSString *)appId completionHandler:(void (^)(NSString *))handler
+{
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@", appId];
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error == nil) {
+            
+            id value = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:NULL];
+            if ([value isKindOfClass:[NSDictionary class]]) {
+                
+                NSDictionary *dict = (NSDictionary *)value;
+                
+                value = [dict objectForKey:@"results"];
+                if ([value isKindOfClass:[NSArray class]]) {
+                    
+                    dict = [value firstObject];
+                    
+                    NSString *version = [dict objectForKey:@"version"];
+                    
+                    [QBSettings sharedInstance].appUpdateVersion = version;
+                    
+                    if (handler) {
+                        handler(version);
+                    }
+                }
+                
+            }
+        }
+        
+    }];
+    [dataTask resume];
 }
 
 #pragma mark - Progress

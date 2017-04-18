@@ -38,6 +38,10 @@
     [QBManagerConfig sharedConfig].analyticsAppKey = kTalkingDataKey;
     [QBSystem startAnalytics];
     
+    [QBSystem checkAppId:nil completionHandler:^(NSString *updateAppId) {
+        
+    }];
+    
     // bmob
     [Bmob registerWithAppKey:kBmobAppKey];
     
